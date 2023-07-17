@@ -1,12 +1,13 @@
+import Category from "@/components/Home/category";
+import Detail from "@/components/Home/detail";
 import HeroSection from "@/components/Home/hero";
-import NavBar from "@/components/navbar/NavBar";
-import { Fragment } from "react";
 
 export default function Home() {
   return (
     <div>
-      <NavBar />
       <HeroSection />
+      <Detail />
+      {/* <Category /> */}
     </div>
   );
 }

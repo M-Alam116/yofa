@@ -6,14 +6,14 @@ export default function NavBar() {
   const btnStyle = {
     background: "orange",
     border: "none",
-    padding: '0.6rem 1rem'
+    padding: "0.6rem 1rem",
   };
 
   return (
     <div className={classes.container}>
       <div className={classes.left}>
         <Link href="/">
-          <Image src="/images/yofo.png" width={55} height={50} alt="logo"/>
+          <Image src="/images/yofo.png" width={55} height={50} alt="logo" />
         </Link>
         <ul>
           <Link href="/">
@@ -31,8 +31,12 @@ export default function NavBar() {
         </ul>
       </div>
       <div className={classes.right}>
-        <Button text={"Sign In"} />
-        <Button text={"Sign Up"} style={btnStyle}/>
+        <Link href="/login">
+          <Button text={"Sign In"} />
+        </Link>
+        <Link href="/signup">
+          <Button text={"Sign Up"} style={btnStyle} />
+        </Link>
       </div>
     </div>
   );
