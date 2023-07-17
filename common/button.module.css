@@ -1,0 +1,12 @@
+.btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid white;
+}
