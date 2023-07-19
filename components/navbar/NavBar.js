@@ -68,7 +68,7 @@ export default function NavBar() {
             </Link>
           </ul>
         ) : (
-          <div className={`${classes.verticalNav} ${hamburger ? "" : classes.open}`}>
+          <div className={classes.verticalNav}>
             <Link href="/" style={{ textDecoration: "none" }}>
               <li className={isActive("/")}>Home</li>
             </Link>
