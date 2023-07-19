@@ -1,0 +1,71 @@
+.container {
+  background: #18224b;
+  padding: 5rem 3rem;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer {
+  background: #0a1029;
+  width: 50rem;
+}
+
+.message {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.outer h1 {
+  font-size: 2rem;
+  color: orange;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.message label {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.message input {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 16px;
+  background-color: #18224b;
+  color: white;
+  border: none;
+}
+
+.message p {
+  margin-top: 1rem;
+  font-size: 16px;
+  color: rgb(190, 184, 184);
+}
+
+@media only screen and (max-width: 780px) {
+  .container {
+    padding: 5rem 20px;
+  }
+
+  .message {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+ 
+@media (max-width: 560px) {
+    .message {
+      grid-template-columns: 1fr;
+    }
+  }

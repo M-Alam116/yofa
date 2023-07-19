@@ -10,7 +10,7 @@ export default function About() {
           width={500}
           height={500}
           alt="about illustration"
-          className={classes}
+          className={classes.img}
         />
       </div>
       <div className={classes.right}>

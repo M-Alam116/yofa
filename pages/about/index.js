@@ -1,8 +1,13 @@
-import About from "@/components/about/about"
+import About from "@/components/about/about";
+import { Fragment } from "react";
+import Head from "next/head";
 export default function AboutPage() {
   return (
-    <div>
+    <Fragment>
+      <Head>
+        <title>Yofa - about</title>
+      </Head>
       <About />
-    </div>
-  )
+    </Fragment>
+  );
 }

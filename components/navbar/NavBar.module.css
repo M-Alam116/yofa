@@ -15,13 +15,13 @@
   gap: 60px;
 }
 
-.left ul {
+.horizontalNav {
   display: flex;
   gap: 40px;
   margin: auto 0;
 }
 
-.left ul li {
+.horizontalNav li {
   text-decoration: none;
   list-style: none;
   color: white;
@@ -30,11 +30,63 @@
 .right {
   display: flex;
   gap: 15px;
+  margin-right: 3rem;
 }
 
-@media only screen and (max-width: 860px) {
-  .left ul {
+.active {
+  border-bottom: 3px solid orange;
+}
+
+.icon {
+  font-size: 30px;
+  display: none;
+  color: orange;
+  position: absolute;
+  top: 1.8rem;
+  right: 1rem;
+}
+
+.verticalNav {
+  display: flex;
+  height: 100%;
+  padding: 2rem;
+  background-color: #0a1029;
+  opacity: 0.9;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  animation: animate;
+  animation-duration: 0.8s;
+}
+
+@keyframes animate {
+  0% {
+    left: -300px;
+  }
+
+  100% {
+    left: 0;
+  }  
+}
+
+.verticalNav li {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  margin: 0.5rem 0;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 900px) {
+  .horizontalNav {
     display: none;
+  }
+
+  .icon {
+    display: block;
   }
 }
 

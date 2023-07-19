@@ -1,7 +1,8 @@
 .container {
-    padding: 4rem 1.5rem;
+    padding: 1.5rem;
     background: #18224b;
     color: white;
+    width: 100%;
   }
   
   .container h1 {
@@ -9,19 +10,22 @@
     font-weight: 700;
     color: orange;
     text-align: center;
-    margin: 4rem 0;
+    margin-bottom: 3rem;
   }
   
   .categories {
     background-color: #0a1029;
     padding: 1rem 0;
     margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .category {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 30px;
   }
   
   .item {
