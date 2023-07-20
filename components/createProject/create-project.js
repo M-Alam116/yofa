@@ -5,7 +5,7 @@ export default function CreateProject() {
   const btnStyle = {
     background: "orange",
     border: "none",
-    padding: "0.8rem 2rem",
+    padding: "0.8rem 3rem",
     fontWeight: "500",
   };
 

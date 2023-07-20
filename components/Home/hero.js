@@ -6,23 +6,22 @@ export default function HeroSection() {
   const btnStyle = {
     background: "orange",
     border: "none",
-    padding: "0.8rem 1.2rem",
+    padding: "0.8rem 3rem",
     fontWeight: "500",
-    borderRadius: "50px",
+    borderRadius: "30px",
   };
 
   return (
     <section className={classes.container}>
       <div className={classes.left}>
-        <h1>
-          WELCOME TO <span>YOFA</span> PLATFORM
-        </h1>
+        <h1>Discover our Swapsters</h1>
         <p>
-          We provide platform for our customers where they just not only manage
-          their projects but can also carry out the services of their of own.
+          Join the Swapsters community, where mutual aid is the golden rule!
+          Offer your skills to help others and in turn benefit from the
+          expertise of the community.
         </p>
-        <Link href='/about'>
-          <Button text={"Read More"} style={btnStyle} />
+        <Link href="/category">
+          <Button text={"Begin"} style={btnStyle} />
         </Link>
       </div>
       <div className={classes.right}>

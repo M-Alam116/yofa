@@ -12,7 +12,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 900) {
+      if (window.innerWidth > 1020) {
         setHamburger(true);
       }
     };
@@ -66,6 +66,9 @@ export default function NavBar() {
             <Link href="/create-project" style={{ textDecoration: "none" }}>
               <li className={isActive("/create-project")}>Create Project</li>
             </Link>
+            <Link href="/category" style={{ textDecoration: "none" }}>
+              <li className={isActive("/category")}>Category</li>
+            </Link>
           </ul>
         ) : (
           <div className={classes.verticalNav}>
@@ -80,6 +83,9 @@ export default function NavBar() {
             </Link>
             <Link href="/create-project" style={{ textDecoration: "none" }}>
               <li className={isActive("/create-project")}>Create Project</li>
+            </Link>
+            <Link href="/category" style={{ textDecoration: "none" }}>
+              <li className={isActive("/category")}>Category</li>
             </Link>
           </div>
         )}

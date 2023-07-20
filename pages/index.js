@@ -1,4 +1,4 @@
-import Category from "@/components/Home/category";
+
 import Detail from "@/components/Home/detail";
 import HeroSection from "@/components/Home/hero";
 import LoginHome from "@/components/loginHome/login-home";
@@ -13,8 +13,7 @@ export default function Home() {
       </Head>
       <HeroSection />
       <Detail />
-      <Category />
-      
+
       <LoginHome />
     </Fragment>
   );
