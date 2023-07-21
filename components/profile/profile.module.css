@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
+  background: #18224b;
+  color: white;
+}
+
+.userInfo {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  flex-direction: column;
+  background: #0a1029;
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+
+/* Hide the default file input button */
+input[type="file"].profilePicture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+input[type="file"].profilePicture::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+input[type="file"].profilePicture::before {
+  content: ''; 
+  padding: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.userInfo h2 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.userInfo input {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background: #18224b;
+  color: white;
+}
+
+.userDetail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.userDetail h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.userDetail p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 2px 0;
+}
+
+.infoDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.extraInfo {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  flex-direction: column;
+  background: #0a1029;
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+
+.extraInfo h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.extraInfo textarea {
+  padding: 1rem;
+  background: #18224b;
+  border: none;
+  outline: none;
+  resize: none;
+  color: white;
+  font-size: 14px;
+}
+
+.btns {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 920px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 3rem 20px;
+    width: 100%;
+  }
+
+  .userInfo {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+
+  .extraInfo {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+
+  .extraInfo textarea {
+    width: 100%;
+  }
+
+  .btns {
+    flex-direction: column;
+    width: 100%;
+  }
+}

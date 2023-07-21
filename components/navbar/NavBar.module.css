@@ -80,7 +80,33 @@
   width: fit-content;
 }
 
-@media only screen and (max-width: 1020px) {
+.dropdownOuter {
+  position: relative;
+}
+
+.dropdownIcon {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownmenu {
+  position: absolute;
+  top: 2rem;
+  left: -2rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #0a1029;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1120px) {
   .horizontalNav {
     display: none;
   }

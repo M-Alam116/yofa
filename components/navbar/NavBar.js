@@ -6,14 +6,20 @@ import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
+import { AiFillCaretDown } from "react-icons/ai";
 
 export default function NavBar() {
   const [hamburger, setHamburger] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1020) {
+      if (window.innerWidth > 1120) {
         setHamburger(true);
+      }
+
+      if (window.innerWidth < 1120) {
+        setDropdown(false);
       }
     };
 
@@ -28,6 +34,10 @@ export default function NavBar() {
 
   const hamburgerHandler = () => {
     setHamburger(!hamburger);
+  };
+
+  const dropdownHandler = () => {
+    setDropdown(!dropdown);
   };
 
   const btnStyle = {
@@ -69,6 +79,33 @@ export default function NavBar() {
             <Link href="/category" style={{ textDecoration: "none" }}>
               <li className={isActive("/category")}>Category</li>
             </Link>
+            <div className={classes.dropdownOuter}>
+              <div className={classes.dropdownIcon} onClick={dropdownHandler}>
+                <span>More</span>
+                <AiFillCaretDown />
+              </div>
+              {dropdown ? (
+                <div className={classes.dropdownmenu}>
+                  <Link href="/notification" style={{ textDecoration: "none" }}>
+                    <li className={isActive("/notification")}>Notification</li>
+                  </Link>
+                  <Link href="/profile" style={{ textDecoration: "none" }}>
+                    <li className={isActive("/profile")}>Profile</li>
+                  </Link>
+                  <Link href="/shop" style={{ textDecoration: "none" }}>
+                    <li className={isActive("/shop")}>Shop</li>
+                  </Link>
+                  <Link href="/payment" style={{ textDecoration: "none" }}>
+                    <li className={isActive("/payment")}>Payment</li>
+                  </Link>
+                  <Link href="/setting" style={{ textDecoration: "none" }}>
+                    <li className={isActive("/setting")}>Setting</li>
+                  </Link>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
           </ul>
         ) : (
           <div className={classes.verticalNav}>
@@ -86,6 +123,21 @@ export default function NavBar() {
             </Link>
             <Link href="/category" style={{ textDecoration: "none" }}>
               <li className={isActive("/category")}>Category</li>
+            </Link>
+            <Link href="/notification" style={{ textDecoration: "none" }}>
+              <li className={isActive("/notification")}>Notification</li>
+            </Link>
+            <Link href="/profile" style={{ textDecoration: "none" }}>
+              <li className={isActive("/profile")}>Profile</li>
+            </Link>
+            <Link href="/shop" style={{ textDecoration: "none" }}>
+              <li className={isActive("/shop")}>Shop</li>
+            </Link>
+            <Link href="/payment" style={{ textDecoration: "none" }}>
+              <li className={isActive("/payment")}>Payment</li>
+            </Link>
+            <Link href="/setting" style={{ textDecoration: "none" }}>
+              <li className={isActive("/setting")}>Setting</li>
             </Link>
           </div>
         )}
