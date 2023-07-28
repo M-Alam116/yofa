@@ -1,4 +1,4 @@
-import Button from "@/common/button";
+import Button from "../common/Button/button";
 import classes from "./shop.module.css";
 export default function Shop() {
   const btnStyle = {

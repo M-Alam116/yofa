@@ -5,7 +5,7 @@ export default function LoginPage() {
   return (
     <Fragment>
       <Head>
-        <title>Yofa - login</title>
+        <title>Log in</title>
       </Head>
       <Login />
     </Fragment>

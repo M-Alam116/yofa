@@ -1,6 +1,5 @@
 .container {
-  /* background: #1f5d98; */
-  background: #0a1029;
+  background: var(--primary-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,15 +12,13 @@
 }
 
 .left h1 {
-  color: white;
   font-family: "Livvic", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
 }
 
 .left p {
-  color: white;
   margin: 1rem 0;
   margin-bottom: 3rem;
 }
@@ -37,7 +34,7 @@
   height: 34rem;
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 880px) {
   .right {
     display: none;
   }

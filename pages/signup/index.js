@@ -1,4 +1,4 @@
-import SignUp from "@/components/signup/signup";
+import Signup from "@/components/signup/Signup/Signup";
 import { Fragment } from "react";
 import Head from "next/head";
 
@@ -6,9 +6,9 @@ export default function SignUpPage() {
   return (
     <Fragment>
       <Head>
-        <title>Yofa - signup</title>
+        <title>What is your Role</title>
       </Head>
-      <SignUp />
+      <Signup />
     </Fragment>
   );
 }

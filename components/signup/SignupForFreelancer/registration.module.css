@@ -1,0 +1,90 @@
+.container {
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social {
+    display: flex;
+    gap: 30%;
+    border: 2px solid gray;
+    padding: 0.8rem;
+    border-radius: 30px;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  
+  .social h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(12, 12, 27);
+  }
+  
+  .socialIcons {
+    font-size: 1.5rem;
+    color: blue;
+  }
+  
+  .leftForm {
+    width: 50%;
+    background: var(--secondary-bg);
+    padding: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .message {
+    margin-top: 4rem;
+  }
+  
+  .message label {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .message input {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 16px;
+    color: black;
+    border-radius: 30px;
+    border: 2px solid gray;
+  }
+  
+  .rightvector {
+    width: 50%;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media only screen and (max-width: 865px) {
+    .leftForm {
+      width: 100%;
+    }
+  
+    .rightvector {
+      width: 0%;
+      display: none;
+    }
+  
+    
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .social {
+      gap: 2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 430px) {
+    .leftForm {
+      padding: 4rem 20px;
+    }
+  }

@@ -1,47 +1,128 @@
 .container {
-  background: #18224b;
-  padding: 5rem 3rem;
-  color: white;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 30% 69%;
+  background-color: var(--primary-bg);
+  padding: 2rem 20px;
 }
 
-.message {
-  background: #0a1029;
-  width: 25rem;
-  height: fit-content;
+.left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
-  border-radius: 10px;
+  background-color: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem;
 }
 
-.message label {
-  font-size: 1.5rem;
+.conversation {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+  position: relative;
+}
+
+.conversation:hover {
+  .dropdown {
+    display: flex;
+  }
+}
+
+.conversation h1 {
+  font-size: 22px;
   font-weight: 600;
 }
 
-.message textarea {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  font-size: 16px;
-  background-color: #18224b;
-  color: white;
-  border: none;
-  resize: none;
+.left h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8rem;
 }
 
-@media only screen and (max-width: 450px) {
-  .container {
-    padding: 5rem 20px;
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  display: none;
+}
+
+.dropdown h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Hide the default checkbox appearance */
+.dropdown input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Style the custom checkbox when checked */
+.dropdown input[type="checkbox"]:checked {
+  background-color: #035266;
+  border: none;
+}
+
+.dropdown label {
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-color: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.right h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.message {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.message textarea {
+  padding: 1rem;
+  resize: none;
+  border: 1.5px solid lightgray;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 940px) {
+  .right {
+    display: none;
   }
 
-  .message {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
     width: 100%;
-    height: fit-content;
   }
 }

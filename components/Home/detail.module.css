@@ -4,34 +4,34 @@
   gap: 2.5rem;
   justify-content: center;
   padding: 8rem 3rem;
-  background: #18224b;
+  background: var(--primary-bg);
 }
 
 .inner {
   display: flex;
   gap: 15px;
-  border: 2px solid white;
   width: 20rem;
   padding: 4rem 2rem;
   border-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 1) 0px 5px 70px;
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .inner h1 {
-  color: orange;
+  color: #fc5757;
   font-size: 24px;
   margin-bottom: 1rem;
 }
 
 .inner p {
-  color: white;
+  color: var(--primary-text);
   font-size: 16px;
 }
 
 .icon {
   width: 100px;
   height: 100px;
-  color: orange;
+  color: #fc5757;
 }
 
 

@@ -4,12 +4,13 @@
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
-  background: #0a1029;
+  background: var( --secondary-bg);
   padding: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .container p {
-  color: white;
+  color: var( --primary-text);
   font-size: 16px;
   font-weight: 400;
   margin-top: 1.5rem;
@@ -17,7 +18,7 @@
 }
 
 .icon {
-  color: orange;
+  color: #fc5757;
   width: 30px;
   height: 30px;
   margin: 0 1rem;

@@ -1,4 +1,4 @@
-import Button from "@/common/button";
+import Button from "../common/Button/button";
 import classes from "./login-home.module.css";
 
 export default function LoginHome() {

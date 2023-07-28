@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Button from "@/common/button";
+import Button from "@/components/common/Button/button";
 import classes from "./NavBar.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
+import Wrapper from "@/components/common/Wrapper/Wrapper";
 
 export default function NavBar() {
   const [hamburger, setHamburger] = useState(true);
@@ -40,10 +41,22 @@ export default function NavBar() {
     setDropdown(!dropdown);
   };
 
-  const btnStyle = {
-    background: "orange",
+  const registerBtn = {
+    background: "transparent",
+    borderRadius: "30px",
+    border: "2px solid #0f6378",
+    color: "#0f6378",
+    fontSize: '14px',
+    padding: "10px 15px",
+  };
+
+  const loginBtn = {
+    background: " #fc5757",
+    borderRadius: "30px",
     border: "none",
-    padding: "0.6rem",
+    color: "#fff",
+    fontSize: '14px',
+    padding: "12px 20px",
   };
 
   const router = useRouter();
@@ -53,10 +66,17 @@ export default function NavBar() {
   };
 
   return (
+    <Wrapper>
     <div className={classes.container}>
       <div className={classes.left}>
         <Link href="/">
-          <Image src="/images/yofo.png" width={55} height={50} alt="logo" />
+          <Image
+            src="/images/yofo.png"
+            width={50}
+            height={45}
+            alt="logo"
+            style={{ background: "black" }}
+          />
         </Link>
         {hamburger ? (
           <ul
@@ -64,41 +84,63 @@ export default function NavBar() {
               hamburger ? classes.horizontalNav : classes.horizontalNav
             }`}
           >
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
               <li className={isActive("/")}>Home</li>
             </Link>
-            <Link href="/about" style={{ textDecoration: "none" }}>
+            <Link
+              href="/about"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/about")}>About</li>
             </Link>
-            <Link href="/message" style={{ textDecoration: "none" }}>
+            <Link
+              href="/message"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/message")}>Message</li>
             </Link>
-            <Link href="/create-project" style={{ textDecoration: "none" }}>
+            <Link
+              href="/create-project"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/create-project")}>Create Project</li>
             </Link>
-            <Link href="/category" style={{ textDecoration: "none" }}>
-              <li className={isActive("/category")}>Category</li>
-            </Link>
+        
             <div className={classes.dropdownOuter}>
               <div className={classes.dropdownIcon} onClick={dropdownHandler}>
-                <span>More</span>
+                <span style={{fontSize: '16px'}}>More</span>
                 <AiFillCaretDown />
               </div>
               {dropdown ? (
                 <div className={classes.dropdownmenu}>
-                  <Link href="/notification" style={{ textDecoration: "none" }}>
+                  <Link
+                    href="/notification"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <li className={isActive("/notification")}>Notification</li>
                   </Link>
-                  <Link href="/profile" style={{ textDecoration: "none" }}>
+                  <Link
+                    href="/profile"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <li className={isActive("/profile")}>Profile</li>
                   </Link>
-                  <Link href="/shop" style={{ textDecoration: "none" }}>
+                  <Link
+                    href="/shop"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <li className={isActive("/shop")}>Shop</li>
                   </Link>
-                  <Link href="/payment" style={{ textDecoration: "none" }}>
+                  <Link
+                    href="/payment"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <li className={isActive("/payment")}>Payment</li>
                   </Link>
-                  <Link href="/setting" style={{ textDecoration: "none" }}>
+                  <Link
+                    href="/setting"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
                     <li className={isActive("/setting")}>Setting</li>
                   </Link>
                 </div>
@@ -109,34 +151,56 @@ export default function NavBar() {
           </ul>
         ) : (
           <div className={classes.verticalNav}>
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
               <li className={isActive("/")}>Home</li>
             </Link>
-            <Link href="/about" style={{ textDecoration: "none" }}>
+            <Link
+              href="/about"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/about")}>About</li>
             </Link>
-            <Link href="/message" style={{ textDecoration: "none" }}>
+            <Link
+              href="/message"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/message")}>Message</li>
             </Link>
-            <Link href="/create-project" style={{ textDecoration: "none" }}>
+            <Link
+              href="/create-project"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/create-project")}>Create Project</li>
             </Link>
-            <Link href="/category" style={{ textDecoration: "none" }}>
-              <li className={isActive("/category")}>Category</li>
-            </Link>
-            <Link href="/notification" style={{ textDecoration: "none" }}>
+       
+            <Link
+              href="/notification"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/notification")}>Notification</li>
             </Link>
-            <Link href="/profile" style={{ textDecoration: "none" }}>
+            <Link
+              href="/profile"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/profile")}>Profile</li>
             </Link>
-            <Link href="/shop" style={{ textDecoration: "none" }}>
+            <Link
+              href="/shop"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/shop")}>Shop</li>
             </Link>
-            <Link href="/payment" style={{ textDecoration: "none" }}>
+            <Link
+              href="/payment"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/payment")}>Payment</li>
             </Link>
-            <Link href="/setting" style={{ textDecoration: "none" }}>
+            <Link
+              href="/setting"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               <li className={isActive("/setting")}>Setting</li>
             </Link>
           </div>
@@ -144,10 +208,10 @@ export default function NavBar() {
       </div>
       <div className={classes.right}>
         <Link href="/login">
-          <Button text={"Sign In"} />
+          <Button text={"Log In"} style={loginBtn} />
         </Link>
         <Link href="/signup">
-          <Button text={"Sign Up"} style={btnStyle} />
+          <Button text={"Register"} style={registerBtn} />
         </Link>
       </div>
       {hamburger ? (
@@ -156,5 +220,6 @@ export default function NavBar() {
         <RxCross2 onClick={hamburgerHandler} className={classes.icon} />
       )}
     </div>
+    </Wrapper>
   );
 }

@@ -5,7 +5,7 @@ export default function ProfilePage() {
   return (
     <Fragment>
     <Head>
-      <title>Yofa - profile</title>
+      <title>Profile</title>
     </Head>
     <Profile />
   </Fragment>
