@@ -1,3 +1,4 @@
+import Wrapper from "../common/Wrapper/Wrapper";
 import classes from "./payment.module.css";
 import { BsCreditCard2Back, BsPaypal } from "react-icons/bs";
 import * as React from "react";
@@ -19,7 +20,7 @@ export default function Payment() {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "20rem",
-    bgcolor: "#0a1029",
+    bgcolor: "#0a1041",
     color: "white",
     border: "none",
     boxShadow: 24,
@@ -27,81 +28,95 @@ export default function Payment() {
   };
 
   return (
-    <section className={classes.container}>
-      <div>
-        <h1>Payment Methods</h1>
-        <p>Easily manage your payments methods through our secure system.</p>
-      </div>
-      <div className={classes.payment} onClick={handleOpen}>
-        <div className={classes.credit}>
-          <BsCreditCard2Back style={{ fontSize: "1.5rem" }} />
-          <h2>Credit Card</h2>
+    <Wrapper>
+      <div className={classes.container}>
+        <div className={classes.payments}>
+          <div>
+            <h1>Payment Methods</h1>
+            <p>
+              Easily manage your payments methods through our secure system.
+            </p>
+          </div>
+          <div className={classes.payment} onClick={handleOpen}>
+            <div className={classes.credit}>
+              <BsCreditCard2Back style={{ fontSize: "1.5rem", color: '#fc5757' }} />
+              <h2>Credit Card</h2>
+            </div>
+            <hr></hr>
+            <div className={classes.paypal}>
+              <BsPaypal style={{ fontSize: "1.5rem", color: '#fc5757' }} />
+              <h2>PayPal</h2>
+            </div>
+          </div>
+          <div>
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              slots={{ backdrop: Backdrop }}
+              slotProps={{
+                backdrop: {
+                  timeout: 500,
+                },
+              }}
+            >
+              <Fade in={open}>
+                <Box sx={style}>
+                  <Typography
+                    id="transition-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    Add payment method
+                    <RxCross1
+                      onClick={handleClose}
+                      style={{
+                        fontSize: "1.3rem",
+                        cursor: "pointer",
+                        position: "absolute",
+                        top: "1rem",
+                        right: "1rem",
+                      }}
+                    />
+                  </Typography>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "1rem",
+                      margin: "1rem 0",
+                      fontSize: "1.2rem",
+                    }}
+                  >
+                    <label
+                      style={{
+                        display: "flex",
+                        gap: "1rem",
+                        alignItems: "center",
+                      }}
+                    >
+                      <input type="radio" name="paymentMethod" />
+                      <span>Credit Card</span>
+                    </label>
+                    <label
+                      style={{
+                        display: "flex",
+                        gap: "1rem",
+                        alignItems: "center",
+                      }}
+                    >
+                      <input type="radio" name="paymentMethod" />
+                      <span>PayPal</span>
+                    </label>
+                  </div>
+                </Box>
+              </Fade>
+            </Modal>
+          </div>
         </div>
-        <hr></hr>
-        <div className={classes.paypal}>
-          <BsPaypal style={{ fontSize: "1.5rem" }} />
-          <h2>PayPal</h2>
-        </div>
       </div>
-      <div>
-        <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          slots={{ backdrop: Backdrop }}
-          slotProps={{
-            backdrop: {
-              timeout: 500,
-            },
-          }}
-        >
-          <Fade in={open}>
-            <Box sx={style}>
-              <Typography
-                id="transition-modal-title"
-                variant="h6"
-                component="h2"
-              >
-                Add payment method
-                <RxCross1
-                  onClick={handleClose}
-                  style={{
-                    fontSize: "1.3rem",
-                    cursor: "pointer",
-                    position: "absolute",
-                    top: "1rem",
-                    right: "1rem",
-                  }}
-                />
-              </Typography>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1rem",
-                  margin: "1rem 0",
-                  fontSize: "1.2rem",
-                }}
-              >
-                <label
-                  style={{ display: "flex", gap: "1rem", alignItems: "center" }}
-                >
-                  <input type="radio" name="paymentMethod" />
-                  <span>Credit Card</span>
-                </label>
-                <label
-                  style={{ display: "flex", gap: "1rem", alignItems: "center" }}
-                >
-                  <input type="radio" name="paymentMethod" />
-                  <span>PayPal</span>
-                </label>
-              </div>
-            </Box>
-          </Fade>
-        </Modal>
-      </div>
-    </section>
+    </Wrapper>
   );
 }

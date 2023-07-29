@@ -1,18 +1,21 @@
 .container {
+  width: 100%;
+  background: var(--primary-bg);
+  padding: 2rem 10px;
+}
+
+.payments {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 5rem 3rem;
-  background: #18224b;
-  width: 100%;
-  color: white;
+  padding: 2rem;
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .container h1 {
   font-size: 2rem;
-  color: orange;
   font-weight: 600;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -25,10 +28,12 @@
 }
 
 .payment {
+  margin-top: 2rem;
   width: fit-content;
   height: fit-content;
   padding: 3rem 5rem;
-  background: #0a1029;
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
 }
 

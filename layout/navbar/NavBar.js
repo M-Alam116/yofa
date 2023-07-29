@@ -114,23 +114,12 @@ export default function NavBar() {
               {dropdown ? (
                 <div className={classes.dropdownmenu}>
                   <Link
-                    href="/notification"
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    <li className={isActive("/notification")}>Notification</li>
-                  </Link>
-                  <Link
                     href="/profile"
                     style={{ textDecoration: "none", color: "black" }}
                   >
                     <li className={isActive("/profile")}>Profile</li>
                   </Link>
-                  <Link
-                    href="/shop"
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    <li className={isActive("/shop")}>Shop</li>
-                  </Link>
+            
                   <Link
                     href="/payment"
                     style={{ textDecoration: "none", color: "black" }}
@@ -174,23 +163,12 @@ export default function NavBar() {
             </Link>
        
             <Link
-              href="/notification"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <li className={isActive("/notification")}>Notification</li>
-            </Link>
-            <Link
               href="/profile"
               style={{ textDecoration: "none", color: "black" }}
             >
               <li className={isActive("/profile")}>Profile</li>
             </Link>
-            <Link
-              href="/shop"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <li className={isActive("/shop")}>Shop</li>
-            </Link>
+  
             <Link
               href="/payment"
               style={{ textDecoration: "none", color: "black" }}

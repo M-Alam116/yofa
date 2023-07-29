@@ -1,4 +1,100 @@
 .container {
   background: var(--primary-bg);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 10px;
 }
+
+.top {
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+
+.top h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.container h6 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 5px;
+}
+
+.process {
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 3rem 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.process h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.process p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.count {
+  width: 3rem;
+  height: 3rem;
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  background: blue;
+}
+
+.bottom {
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.heading h2{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bottom p {
+  font: 14px;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+ .process {
+  flex-direction: column;
+ }
+
+ .heading {
+  display: none;
+ }
+}
+
+@media only screen and (max-width: 500px) {
+  .top {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+ }

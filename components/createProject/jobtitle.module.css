@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary-bg);
+  padding: 4rem 10px;
+}
+
+.job {
+  width: 68%;
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem;
+}
+
+.job h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.job h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.job p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.job input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 2px solid lightgray;
+  margin-top: 1rem;
+}
+
+.job select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 2px solid lightgray;
+  font-size: 16px;
+}
+
+.job option {
+  width: 100%;
+}
+
+.info {
+  width: 30%;
+  height: fit-content;
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .info {
+        display: none;
+    }
+
+    .job {
+        width: 100%;
+    }
+   }

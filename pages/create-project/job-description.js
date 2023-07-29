@@ -1,14 +1,14 @@
-import CreateProject from "@/components/createProject/create-project";
 import { Fragment } from "react";
 import Head from "next/head";
+import JobDescription from "@/components/createProject/JobDescription";
 
-export default function CreateProjectPage() {
+export default function JobDescriptions() {
   return (
     <Fragment>
       <Head>
         <title>Create Project</title>
       </Head>
-      <CreateProject />
+      <JobDescription />
     </Fragment>
   );
 }

@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-bg);
+  padding: 4rem 10px;
+}
+
+.inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  background: var(--secondary-bg);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.inner h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.inner h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.inner input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 2px solid lightgray;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.inner select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 2px solid lightgray;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+  .inner {
+    flex-direction: column;
+  }
+}
