@@ -32,7 +32,11 @@ export default function Profile() {
         <div className={classes.basicInfo}>
           <div style={{ position: "relative" }}>
             <BsFillCameraFill className={classes.picIcon} />
-            <input type="file" className={classes.profilePicture} />
+            <input
+              type="file"
+              accept=".jpg, .jpeg, .png, .gif, .bmp, image/jpeg, image/png, image/gif, image/bmp"
+              className={classes.profilePicture}
+            />
           </div>
           <div className={classes.user}>
             <h1>User Name</h1>
@@ -113,7 +117,7 @@ export default function Profile() {
 
         <div className={classes.review}>
           <h1>Reviews</h1>
-          <div style={{display: 'flex', flexWrap: 'wrap', gap: '1rem'}}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <Box
               sx={{
                 "& > legend": { mt: 2 },
@@ -145,7 +149,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <Button text={"Save"} style={saveBtn}/>
+        <Button text={"Save"} style={saveBtn} />
       </section>
     </Wrapper>
   );

@@ -1,0 +1,19 @@
+.container {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: var(--secondary-bg);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container p {
+    font-size: 16px;
+    font-weight: 500;
+  }
