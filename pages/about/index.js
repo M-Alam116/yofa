@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <Fragment>
       <Head>
-        <title>Yofa - about</title>
+        <title>About</title>
       </Head>
       <About />
     </Fragment>

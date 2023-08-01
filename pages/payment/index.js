@@ -6,7 +6,7 @@ export default function PaymentPage() {
   return (
     <Fragment>
        <Head>
-        <title>Yofa - payment</title>
+        <title>Payment</title>
       </Head>
       <Payment />
     </Fragment>

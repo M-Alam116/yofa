@@ -6,7 +6,7 @@ export default function MessagePage() {
   return (
     <Fragment>
       <Head>
-        <title>Yofa - message</title>
+        <title>Message</title>
       </Head>
       <Message />
     </Fragment>

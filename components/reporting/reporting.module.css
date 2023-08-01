@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+  background: var(--secondary-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 20px;
+}
+
+.container h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0 2rem;
+  justify-content: space-between;
+}
+
+.details {
+  width: 20rem;
+  background: #ededed;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.details h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.details p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.details button {
+  padding: 5px 10px;
+  background: darkblue;
+  color: white;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.expenses {
+  width: 100%;
+  margin: 4rem auto;
+}
+
+.expenses h1 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.expenses span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 759px) {
+  .info {
+    justify-content: center;
+  }
+
+  .container h1 {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .info {
+    margin: 0;
+  }
+
+  .details {
+    width: 100%;
+  }
+}
